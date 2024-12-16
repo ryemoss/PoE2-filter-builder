@@ -1,0 +1,18 @@
+.item-pill {
+  border-radius: 16px;
+  padding: 0 6px;
+  background: theme('primary.600');
+  font-size: 13px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  height: 26px;
+  align-items: center;
+}
+
+.rule-group:has(.close.group:hover),
+.rule:has(.close:hover) {
+  border-color: #ec4630a0;
+  box-shadow: 0 0 3px #ec4630a0;
+  transition: border-color .2s, box-shadow .2s;
+}

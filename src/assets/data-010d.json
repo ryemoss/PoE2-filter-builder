@@ -1,0 +1,18 @@
+{
+  "Rarities": [
+    "Normal", "Magic", "Rare", "Unique"
+  ],
+  "WeaponClasses": [
+    "Bow", "Crossbow", "Focus", "Mace", "Quaterstaff", "Quiver", "Sceptre", "Shield", "Staff", "Wand"
+  ],
+  "ArmorClasses": [
+    "Helmet", "Body Armour", "Gloves", "Boots"
+  ],
+  "Orbs": [
+    "Artificers", "Chaos", "Divine", "Exalted", "Regal", "Perfect Jewellers", "Greater Jewellers", "Lesser Jewellers" , 
+    "Alchemy", "Annulment", "Augmentation", "Chance", "Transmutation", "Vaal"
+  ],
+  "Shards": [
+    "Alchemy", "Artificers", "Chance", "Regal", "Transmutation"
+  ]
+}

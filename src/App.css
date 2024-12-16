@@ -1,0 +1,81 @@
+#root {
+	height: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 2rem 4rem 4rem;
+	font-size: 14px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Inter';
+	background: rgb(238, 238, 241);
+}
+
+body {
+	height: 100vh;
+}
+
+h1 {
+	font-size: 22px;
+	letter-spacing: 1.5px;
+	font-weight: 300;
+	color: theme(primary.800);
+}
+
+button,
+input {
+	background: theme(primary.800);
+	padding: 8px 16px;
+	border-radius: 4px;
+	color: white;
+	transition: background-color 0.2s;
+	box-shadow: 0 0 #0000, var(--tw-shadow);
+}
+
+button:hover {
+	background: rgb(30, 53, 102);
+}
+
+button.secondary,
+input {
+	background: white;
+	border: 1px solid theme(primary.400);
+	color: theme(primary.800);
+
+	&:hover {
+		background-color: theme(primary.200);
+	}
+}
+
+button.small,
+input {
+	padding: 4px 12px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+
+button.close {
+	border: none;
+	background: none;
+	color: theme(primary.400);
+
+	&:hover {
+		background-color: theme(primary.200);
+		color: theme(primary.800);
+		opacity: 1;
+	}
+}
+
+hr.vertical {
+	width: 1px;
+	height: auto;
+	border: none;
+	border-left: 1px solid theme(primary.300);
+}
