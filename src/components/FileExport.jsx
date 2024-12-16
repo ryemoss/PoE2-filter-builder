@@ -46,7 +46,7 @@ export default function FileExport() {
 		finalText += FILTER_FOOTER;
 		console.log(finalText);
 
-		// downloadFile(filterText);
+		downloadFile(finalText);
 	}
 
 	function downloadFile(text) {
