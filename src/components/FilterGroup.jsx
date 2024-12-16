@@ -6,12 +6,13 @@ import RuleMenu from './RuleMenu';
 import ItemStat from './rules/ItemStat';
 import CurrencyRules from './rules/CurrencyRules';
 import ColorRules from './rules/ColorRules';
+import MinimapIconRules from './rules/MinimapIconRules';
 import { uuid } from '../utils/uidGenerator';
 import { memo, useCallback, useEffect, useState } from 'react';
 import { useStore } from '../store/store.js';
 import { useTooltip, Tooltip } from './Tooltip';
 
-const ruleOptions = ['Rarity', 'Currency', 'Equipment Type', 'Stats', 'Colors'];
+const ruleOptions = ['Rarity', 'Currency', 'Equipment Type', 'Stats', 'Colors', 'Minimap Icon'];
 
 const RuleWrapper = memo(({ id, children, removeRule }) => (
 	<div className="flex justify-between rule p-1 border border-transparent">
@@ -66,6 +67,8 @@ export default function FilterGroup({ id, removeGroup }) {
 					return { id: uuid(), pos: 3, name: 'Stats', component: ItemStat };
 				case 'Colors':
 					return { id: uuid(), pos: 9, name: 'Colors', component: ColorRules };
+				case 'Minimap Icon':
+					return { id: uuid(), pos: 10, name: 'Minimap Icon', component: MinimapIconRules };
 				default:
 					return null;
 			}

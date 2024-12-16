@@ -13,10 +13,12 @@ export default function ColorRules({ updateRule }) {
 	}
 
 	useEffect(() => {
-		const font = fontColor.r >= 0 ? `SetTextColor ${convertRgbaToFilterString(fontColor)}\n  ` : '';
-		const border = borderColor.r >= 0 ? `SetBorderColor ${convertRgbaToFilterString(borderColor)}\n  ` : '';
+		const font = fontColor.r >= 0 ? `SetTextColor ${convertRgbaToFilterString(fontColor)}` : '';
+		const border = borderColor.r >= 0 ? `SetBorderColor ${convertRgbaToFilterString(borderColor)}` : '';
 		const bg = bgColor.r >= 0 ? `SetBackgroundColor ${convertRgbaToFilterString(bgColor)}` : '';
-		updateRule(`${font}${border}${bg}`);
+		const ws1 = font ? `\n  ` : '';
+		const ws2 = (font || border) && bg ? `\n  ` : '';
+		updateRule(`${font}${ws1}${border}${ws2}${bg}`);
 	}, [fontColor, borderColor, bgColor]);
 
 	return (

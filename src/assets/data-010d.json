@@ -14,5 +14,10 @@
   ],
   "Shards": [
     "Alchemy", "Artificers", "Chance", "Regal", "Transmutation"
-  ]
+  ],
+  "MinimapIcons": {
+    "Sizes": [0, 1, 2],
+    "Shapes": ["Circle", "Diamond", "Hexagon", "Square", "Star", "Triangle", "Cross", "Moon", "Raindrop", "Kite", "Pentagon", "UpsideDownHouse"],
+    "Colors": ["Red", "Green", "Blue", "Brown", "White", "Yellow", "Cyan", "Grey", "Orange", "Pink", "Purple"]
+  }
 }

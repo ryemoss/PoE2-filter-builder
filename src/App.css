@@ -79,3 +79,12 @@ hr.vertical {
 	border: none;
 	border-left: 1px solid theme(primary.300);
 }
+
+@media only screen and (max-width: 480px) {
+	#root {
+		padding: 1rem;
+	}
+	#filter-groups {
+		margin-right: 2rem;
+	}
+}

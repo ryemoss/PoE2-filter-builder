@@ -6,7 +6,7 @@ import { useStore } from '../store/store';
 
 const RuleGroups = ({ groups, removeGroup }) => {
 	return (
-		<div className="flex flex-col gap-2">
+		<div id="filter-groups" className="flex flex-col gap-2">
 			{groups.map((g) => (
 				<FilterGroup removeGroup={() => removeGroup(g.id)} key={g.id} id={g.id} />
 			))}

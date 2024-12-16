@@ -1,13 +1,19 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 export const useTooltip = () => {
 	const [tooltipData, setTooltipData] = useState(null);
+	const timer = useRef(null);
 
 	const showTooltip = (clientX, clientY, text) => {
-		setTooltipData({ clientX, clientY, isVisible: true, text });
+		clearTimeout(timer.current);
+
+		timer.current = setTimeout(() => {
+			setTooltipData({ clientX, clientY, isVisible: true, text });
+		}, 500);
 	};
 
 	const hideTooltip = () => {
+		clearTimeout(timer.current);
 		setTooltipData(null);
 	};
 
@@ -19,7 +25,9 @@ export const Tooltip = ({ clientX, clientY, isVisible, text }) => {
 		<>
 			{isVisible && (
 				<div
-					className="absolute rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-25 z-10"
+					className={`absolute rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-25 z-10 transition-opacity duration-300 ${
+						isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+					}`}
 					style={{
 						left: `${clientX}px`,
 						top: `${clientY - 36}px `,
