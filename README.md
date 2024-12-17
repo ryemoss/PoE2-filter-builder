@@ -26,7 +26,7 @@ Each **Rule** generally corresponds to a row within the Group:
 - validate the file before download to clean-up redundant or broken filter groups.
 - preconfigured example filters
 - ability to import an existing .filter file
-- modifiers for SoundEffects, FontSize, Minimapicon
+- modifiers for SoundEffects, FontSize, ~~Minimapicon~~
 - extend Currency options for end-game content
 - edge case handling (Bow vs Crossbow) / automatic reordering for specificity
 - extend Rule options to include more Conditions from https://www.pathofexile.com/item-filter/about

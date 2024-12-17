@@ -9,11 +9,12 @@
     "Helmet", "Body Armour", "Gloves", "Boots"
   ],
   "Orbs": [
-    "Artificers", "Chaos", "Divine", "Exalted", "Regal", "Perfect Jewellers", "Greater Jewellers", "Lesser Jewellers" , 
+    "Artificer's", "Chaos", "Divine", "Exalted", "Regal", 
+    "Perfect Jeweller's", "Greater Jeweller's", "Lesser Jeweller's" , 
     "Alchemy", "Annulment", "Augmentation", "Chance", "Transmutation", "Vaal"
   ],
   "Shards": [
-    "Alchemy", "Artificers", "Chance", "Regal", "Transmutation"
+    "Alchemy", "Artificer's", "Chance", "Regal", "Transmutation"
   ],
   "MinimapIcons": {
     "Sizes": [0, 1, 2],
