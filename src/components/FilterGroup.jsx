@@ -42,7 +42,7 @@ const RuleGroups = memo(({ rules, removeRule }) => {
 
 export default function FilterGroup({ id, removeGroup }) {
 	const [rules, setRules] = useState([]);
-	const { tooltipData, showTooltip, hideTooltip } = useTooltip(); // Use the custom hook to manage tooltip
+	const { tooltipData, showTooltip, hideTooltip } = useTooltip();
 	const [blacklistedRules, setBlacklistedRules] = useState([]);
 
 	const store = useStore();

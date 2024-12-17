@@ -9,12 +9,17 @@
     "Helmet", "Body Armour", "Gloves", "Boots"
   ],
   "Orbs": [
-    "Artificer's", "Chaos", "Divine", "Exalted", "Regal", 
-    "Perfect Jeweller's", "Greater Jeweller's", "Lesser Jeweller's" , 
-    "Alchemy", "Annulment", "Augmentation", "Chance", "Transmutation", "Vaal"
+    ["Artificer's", "Artificer's Orb"], ["Chaos", "Chaos Orb"], ["Divine", "Divine Orb"], 
+    ["Exalted", "Exalted Orb"], ["Regal", "Regal Orb"], ["Vaal", "Vaal Orb"], 
+    ["Perfect Jeweller's", "Perfect Jeweller's Orb"], ["Greater Jeweller's", "Greater Jeweller's Orb"], ["Lesser Jeweller's", "Lesser Jeweller's Orb"], 
+    ["Alchemy", "Orb of Alchemy"], ["Annulment", "Orb of Annulment"], ["Augmentation", "Orb of Augmentation"], 
+    ["Chance", "Orb of Chance"], ["Transmutation", "Orb of Transmutation"]
   ],
   "Shards": [
     "Alchemy", "Artificer's", "Chance", "Regal", "Transmutation"
+  ],
+  "Other": [
+    "Scroll of Wisdom", "Arcanist's Etcher", "Armourer's Scrap", "Blacksmith's Whetstone", "Gemcutter's Prism", "Glassblower's Bauble", "Mirror of Kalandra"
   ],
   "MinimapIcons": {
     "Sizes": [0, 1, 2],
