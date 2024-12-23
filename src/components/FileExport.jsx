@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useStore } from '../store/store';
 
 const FILTER_HEADER = `#-------------------------
@@ -9,8 +10,9 @@ const FILTER_HEADER = `#-------------------------
 const FILTER_FOOTER = `
 #-------------------------`;
 
-export default function FileExport() {
+export function useFilePrepare() {
 	const store = useStore();
+	const [filePreview, setFilePreview] = useState('');
 
 	function transformRuleGroupToString(group) {
 		let rulesString = '';
@@ -44,9 +46,18 @@ export default function FileExport() {
 		});
 
 		finalText += FILTER_FOOTER;
-		console.log(finalText);
+		setFilePreview(finalText);
+	}
 
-		downloadFile(finalText);
+	return { filePreview, transformToFilterText };
+}
+
+export default function FileExport() {
+	const { filePreview, transformToFilterText } = useFilePrepare();
+
+	function prepareAndDownload() {
+		transformToFilterText();
+		downloadFile(filePreview);
 	}
 
 	function downloadFile(text) {
@@ -62,7 +73,7 @@ export default function FileExport() {
 	}
 
 	return (
-		<button className="mt-auto justify-self-end" onClick={transformToFilterText}>
+		<button className="justify-self-end w-[50%]" onClick={prepareAndDownload}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"

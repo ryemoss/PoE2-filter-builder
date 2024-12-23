@@ -16,3 +16,38 @@
   box-shadow: 0 0 3px #ec4630a0;
   transition: border-color .2s, box-shadow .2s;
 }
+
+#filter-preview {
+  font-family: monospace;
+  font-size: 11px;
+  color: rgb(61, 61, 61);
+
+  .foreground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: .5;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 2px;
+  }
+}
+
+.refresh-icon {
+  border: none;
+	background: none;
+	color: theme('primary.400');
+  padding: 6px;
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+	&:hover {
+		background-color: theme('primary.200');
+		color: theme('primary.800');
+		opacity: 1;
+	}
+}
