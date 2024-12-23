@@ -34,7 +34,10 @@ export default function FilterGenerator() {
 
 	return (
 		<section className="flex flex-1 h-[100%] flex-col">
-			<h1>Path of Exile 2 - Filter Builder</h1>
+			<div className="flex items-center">
+				<img className="w-32" src="src/assets/poe2-logo.webp" />
+				<h1>Path of Exile 2 - Filter Builder</h1>
+			</div>
 			<hr className="my-8 border-zinc-300"></hr>
 
 			<RuleGroups groups={groups} removeGroup={removeGroup} />

@@ -11,6 +11,10 @@ export default function MinimapIconRules({ updateRule }) {
 		updateRule(`MinimapIcon ${iconSize} ${iconColor} ${iconShape}`);
 	}, [iconSize, iconColor, iconShape]);
 
+	function selectSize(value) {
+		setIconSize(data.MinimapIcons.Sizes[value]);
+	}
+
 	return (
 		<div className="flex gap-5 items-center">
 			<span>Minimap Icon</span>
@@ -22,7 +26,7 @@ export default function MinimapIconRules({ updateRule }) {
 				</div>
 				<div className="flex gap-1 items-center">
 					<span>Size</span>
-					<DropdownMenu options={data.MinimapIcons.Sizes} itemSelected={setIconSize} />
+					<DropdownMenu options={Object.keys(data.MinimapIcons.Sizes)} itemSelected={selectSize} />
 				</div>
 				<div className="flex gap-1 items-center">
 					<span>Color</span>

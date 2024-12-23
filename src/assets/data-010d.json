@@ -22,7 +22,11 @@
     "Scroll of Wisdom", "Arcanist's Etcher", "Armourer's Scrap", "Blacksmith's Whetstone", "Gemcutter's Prism", "Glassblower's Bauble", "Mirror of Kalandra"
   ],
   "MinimapIcons": {
-    "Sizes": [0, 1, 2],
+    "Sizes": {
+      "Small": "2",
+      "Medium": "1",
+      "Big": "0"
+    },
     "Shapes": ["Circle", "Diamond", "Hexagon", "Square", "Star", "Triangle", "Cross", "Moon", "Raindrop", "Kite", "Pentagon", "UpsideDownHouse"],
     "Colors": ["Red", "Green", "Blue", "Brown", "White", "Yellow", "Cyan", "Grey", "Orange", "Pink", "Purple"]
   }
