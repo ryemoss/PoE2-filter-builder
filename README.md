@@ -2,7 +2,7 @@
 
 This filter builder is meant to help newer players of Path of Exile 2 create an item filter to be used in-game.
 
-![Tool preview](src/assets/poefb-example.png)
+![Tool preview](src/assets/poefb-example2.png)
 
 Each **Group** corresponds to a single item filter block:
 
