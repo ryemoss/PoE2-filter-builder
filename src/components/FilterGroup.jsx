@@ -2,6 +2,7 @@ import './FilterGroup.scss';
 import ShowHideSwitch from './ShowHideSwitch';
 import RarityRule from './rules/RarityRule';
 import EquipmentRules from './rules/EquipmentRules';
+import ItemsRules from './rules/ItemsRules';
 import RuleMenu from './RuleMenu';
 import ItemStat from './rules/ItemStat';
 import CurrencyRules from './rules/CurrencyRules';
@@ -12,7 +13,7 @@ import { memo, useCallback, useEffect, useState } from 'react';
 import { useStore } from '../store/store.js';
 import { useTooltip, Tooltip } from './Tooltip';
 
-const ruleOptions = ['Rarity', 'Currency', 'Equipment Type', 'Stats', 'Colors', 'Minimap Icon'];
+const ruleOptions = ['Rarity', 'Currency', 'Equipment Type', 'Items', 'Stats', 'Colors', 'Minimap Icon'];
 
 const RuleWrapper = memo(({ id, children, removeRule }) => (
 	<div className="flex justify-between rule p-1 border border-transparent">
@@ -61,6 +62,8 @@ export default function FilterGroup({ id, removeGroup }) {
 					return { id: uuid(), pos: 1, name: 'Rarity', component: RarityRule };
 				case 'Equipment Type':
 					return { id: uuid(), pos: 2, name: 'Equipment Type', component: EquipmentRules };
+				case 'Items':
+					return { id: uuid(), pos: 2, name: 'Items', component: ItemsRules };
 				case 'Currency':
 					return { id: uuid(), pos: 2, name: 'Currency', component: CurrencyRules };
 				case 'Stats':

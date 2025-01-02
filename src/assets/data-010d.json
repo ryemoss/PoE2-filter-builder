@@ -29,5 +29,10 @@
     },
     "Shapes": ["Circle", "Diamond", "Hexagon", "Square", "Star", "Triangle", "Cross", "Moon", "Raindrop", "Kite", "Pentagon", "UpsideDownHouse"],
     "Colors": ["Red", "Green", "Blue", "Brown", "White", "Yellow", "Cyan", "Grey", "Orange", "Pink", "Purple"]
-  }
+  },
+  "OtherItems": [
+    "Uncut Skill Gem", "Uncut Support Gem", "Uncut Spirit Gem",
+    "Charm", "Life Flask", "Mana Flask",
+    "Waystone", "Tablet"
+  ]
 }

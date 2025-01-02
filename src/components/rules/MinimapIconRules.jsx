@@ -4,7 +4,7 @@ import DropdownMenu from '../DropdownMenu';
 
 export default function MinimapIconRules({ updateRule }) {
 	const [iconShape, setIconShape] = useState(data.MinimapIcons.Shapes[0]);
-	const [iconSize, setIconSize] = useState(data.MinimapIcons.Sizes[0]);
+	const [iconSize, setIconSize] = useState(data.MinimapIcons.Sizes['Small']);
 	const [iconColor, setIconColor] = useState(data.MinimapIcons.Colors[0]);
 
 	useEffect(() => {
