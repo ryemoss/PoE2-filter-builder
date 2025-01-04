@@ -3,7 +3,7 @@
     "Normal", "Magic", "Rare", "Unique"
   ],
   "WeaponClasses": [
-    "Bow", "Crossbow", "Focus", "Mace", "Quaterstaff", "Quiver", "Sceptre", "Shield", "Staff", "Wand"
+    "Bow", "Crossbow", "Focus", "Mace", "Quarterstaff", "Quiver", "Sceptre", "Shield", "Staff", "Wand"
   ],
   "ArmorClasses": [
     "Helmet", "Body Armour", "Gloves", "Boots"
