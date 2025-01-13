@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import data from '../../assets/data-010d.json';
-import DropdownMenu from '../DropdownMenu';
 
 const dropdownOptions = 'OtherItems';
 

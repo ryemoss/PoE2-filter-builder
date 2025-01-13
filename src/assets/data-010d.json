@@ -19,7 +19,9 @@
     "Alchemy", "Artificer's", "Chance", "Regal", "Transmutation"
   ],
   "Other": [
-    "Scroll of Wisdom", "Arcanist's Etcher", "Armourer's Scrap", "Blacksmith's Whetstone", "Gemcutter's Prism", "Glassblower's Bauble", "Mirror of Kalandra"
+    "Scroll of Wisdom", "Arcanist's Etcher", "Armourer's Scrap", "Blacksmith's Whetstone", 
+    "Gemcutter's Prism", "Glassblower's Bauble", "Broken Circle Artifact", "Order Artifact",
+    "Sun Artifact", "Exotic Coinage", "Breach Splinter", "Catalyst", "Mirror of Kalandra"
   ],
   "MinimapIcons": {
     "Sizes": {

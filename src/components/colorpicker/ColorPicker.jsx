@@ -34,6 +34,15 @@ export const ColorPicker = ({ color, onChange, resetColor }) => {
 			{isOpen && (
 				<div className="popover z-20" ref={popover}>
 					<RgbaColorPicker color={color} onChange={onChange} />
+					<div className="w-full p-1 text-center">
+						{color.r >= 0 ? (
+							<>
+								{color.r} {color.g} {color.b} {Math.round(color.a * 255)}
+							</>
+						) : (
+							'0 0 0 255'
+						)}
+					</div>
 					<button className="w-full" onClick={handleReset}>
 						Reset to default
 					</button>

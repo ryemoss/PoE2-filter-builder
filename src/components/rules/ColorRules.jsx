@@ -9,7 +9,11 @@ export default function ColorRules({ updateRule }) {
 	const [bgColor, setBgColor] = useState(defaultColor);
 
 	function convertRgbaToFilterString(color) {
-		return `${color.r} ${color.g} ${color.b} ${Math.round(color.a * 255)}`;
+		const alpha = Math.round(color.a * 255);
+		if (alpha < 255) {
+			return [color.r, color.g, color.b, alpha].join(' ');
+		}
+		return [color.r, color.g, color.b].join(' ');
 	}
 
 	useEffect(() => {

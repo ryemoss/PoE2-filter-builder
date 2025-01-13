@@ -8,23 +8,24 @@ import ItemStat from './rules/ItemStat';
 import CurrencyRules from './rules/CurrencyRules';
 import ColorRules from './rules/ColorRules';
 import MinimapIconRules from './rules/MinimapIconRules';
+import CustomTextRule from './rules/CustomTextRule';
 import { uuid } from '../utils/uidGenerator';
-import { memo, useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useStore } from '../store/store.js';
 import { useTooltip, Tooltip } from './Tooltip';
 
-const ruleOptions = ['Rarity', 'Currency', 'Equipment Type', 'Items', 'Stats', 'Colors', 'Minimap Icon'];
+const ruleOptions = ['Rarity', 'Currency', 'Equipment Type', 'Items', 'Custom Text', 'Stats', 'Colors', 'Minimap Icon'];
 
-const RuleWrapper = memo(({ id, children, removeRule }) => (
+const RuleWrapper = ({ id, children, removeRule }) => (
 	<div className="flex justify-between rule p-1 border border-transparent">
 		{children}
 		<button className="close text-xs px-2 py-1" onClick={() => removeRule(id)}>
 			🞩
 		</button>
 	</div>
-));
+);
 
-const RuleGroups = memo(({ rules, removeRule }) => {
+const RuleGroups = ({ rules, removeRule }) => {
 	const store = useStore();
 
 	const updateRule = useCallback((id, val) => {
@@ -39,7 +40,7 @@ const RuleGroups = memo(({ rules, removeRule }) => {
 			</RuleWrapper>
 		);
 	});
-});
+};
 
 export default function FilterGroup({ id, removeGroup }) {
 	const [rules, setRules] = useState([]);
@@ -66,6 +67,8 @@ export default function FilterGroup({ id, removeGroup }) {
 					return { id: uuid(), pos: 2, name: 'Items', component: ItemsRules };
 				case 'Currency':
 					return { id: uuid(), pos: 2, name: 'Currency', component: CurrencyRules };
+				case 'Custom Text':
+					return { id: uuid(), pos: 2, name: 'Custom Text', component: CustomTextRule };
 				case 'Stats':
 					return { id: uuid(), pos: 3, name: 'Stats', component: ItemStat };
 				case 'Colors':

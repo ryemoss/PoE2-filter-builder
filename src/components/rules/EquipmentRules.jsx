@@ -40,7 +40,7 @@ export default function WeaponPills({ updateRule }) {
 				{data[translateSource(pillSource || dropdownOptions[0])].map((item) => {
 					return (
 						<div
-							className={`item-pill ${selectedPills?.includes(item) ? '' : 'opacity-30'}`}
+							className={`item-pill ${selectedPills?.includes(item) ? '' : 'opacity-35'}`}
 							onClick={() => selectPill(item)}
 							key={item}
 						>
