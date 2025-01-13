@@ -1,3 +1,3 @@
-export default function InputBox({ onChange, className, type = 'number' }) {
-	return <input className={`shadow w-[80px] ${className}`} type={type} onChange={onChange} />;
+export default function InputBox({ onChange, width = '80', type = 'number' }) {
+	return <input className={`shadow w-[${width}px]`} type={type} onChange={onChange} />;
 }

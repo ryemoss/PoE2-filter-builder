@@ -8,7 +8,7 @@ export default function CustomText({ updateRule }) {
 	return (
 		<div className="flex gap-3 items-center">
 			<span>Custom Text</span>
-			<InputBox className={'w-[320px]'} onChange={handleTextChange} type="text" />
+			<InputBox width={320} onChange={handleTextChange} type="text" />
 		</div>
 	);
 }
